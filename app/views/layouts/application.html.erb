@@ -12,6 +12,13 @@
   
 
   <body>
+    
+   <main>
+    <div class="flash-message notice">
+      <%= flash[:notice] %>
+    </div>
     <%= yield %>
+    </main>
+    
   </body>
 </html>
