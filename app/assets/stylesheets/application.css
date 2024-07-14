@@ -43,3 +43,34 @@ table.box td {
 .flash-message.notice {
   color: green;
 }
+
+
+
+table.error_message {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+
+    table.error_message th {
+      border-width: 1px 1px 0;
+      padding: 10px;
+      border-style: solid;
+      border-color: red;
+      background-color: red;
+      color: white;
+    }
+
+    table.error_message td {
+      border-width: 1px 1px 0;
+      padding: 30px;
+      border-style: solid;
+      border-color: red;
+      background-color: lightgray;
+    }
+
+    table.error_message tr:last-child td {
+      border-width: 1px;
+    }

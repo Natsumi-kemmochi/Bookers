@@ -1,16 +1,30 @@
-<h2>EditingBook</h2>
+<h2>Editing Book</h2>
 
-<div class="flash-message alert">
+
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>errors prohibited this book from being saved:
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-  <br>
+<table class="error_message">
+    <tr>
+      <th>
+      <%= @book.errors.count %>errors prohibited this book from being saved:
+      </th>
+    </tr>
+  
+    <tr>
+      <td>
+        <ul> 
+          <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+         <% end %>
+      </ul>
+      </td>
+    </tr>
+</table>
 <% end %>
-</div>
+
+
+
+
+
 
 <%= form_with model: @book do |f| %>
 <br>
@@ -28,4 +42,3 @@
 
 <%= link_to 'Show', book_path %> | 
 <%= link_to 'Back', books_path %>
-
